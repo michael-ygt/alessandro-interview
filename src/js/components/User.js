@@ -26,7 +26,7 @@ export default class App extends React.Component {
   render() {
     console.log(this.state.user)
     return (
-      <div>
+      <div className="user-card">
         <SearchForm fetchUser={this.fetchUser} />
         {this.state.user.login}
       </div>

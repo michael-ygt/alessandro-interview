@@ -10,7 +10,7 @@ const SearchForm = ({ fetchUser }) => {
 
   return (
     <form onSubmit={handleSubmit}>
-      <input ref={ref => input = ref} placeholder="Enter username" />
+      <input className="user-card__input" ref={ref => input = ref} placeholder="Type Username + Enter" />
     </form>
   )
 }
