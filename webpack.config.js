@@ -1,5 +1,6 @@
 const webpack = require("webpack")
 const path = require("path")
+const CopyWebpackPlugin = require("copy-webpack-plugin")
 
 module.exports = {
   context: path.resolve(__dirname, "src"),
@@ -9,6 +10,9 @@ module.exports = {
     publicPath: "/dist/",
     filename: "app.js"
   },
+  plugins: [
+    new CopyWebpackPlugin([{ from: "./images" }])
+  ],
   module: {
     rules: [{
       test: /\.jsx?$/,
